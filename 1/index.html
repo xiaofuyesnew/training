@@ -30,11 +30,38 @@
             <p class="red">第三个段落</p>
         </li>
     </ul>
+    <ul>
+        <li>
+            <p id="second" class="gray">第四个段落</p>
+        </li>
+        <li>
+            <input type="text">
+            <input type="checkbox">
+        </li>
+        <li class="red">
+            <p class="red">第五个段落</p>
+        </li>
+    </ul>
     <li>外面的li</li>
+    <a href="#">有href</a>
+    <br>
+    <a>无href</a><br>
+    <script>
+        $(function () {
+            setTimeout(function () {
+                $('body').append(
+                    `<button id="btn">戳我</button>`
+                )
+            }, 3000)
+/*
+            $('#btn').click(function () {
+                alert('好疼疼！')
+            })
+            */
+            $(document).on('click', '#btn', function () {
+                alert('好疼疼！')
+            })
+        })
+    </script>
 </body>
 </html>
-
-<script>
-    $('.red:first')  //第一个类名为red的元素
-    $('li:first-child')  //li的第一个子元素
-</script>
